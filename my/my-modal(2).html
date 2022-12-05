@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>my</title>
+    <link rel="stylesheet" href="../my/main(2).css" />
+    <link rel="stylesheet" href="../my/my(2).css" />
+    <link rel="stylesheet" href="../my/animation.css" />
+    <style>
+      header {
+        text-align: center;
+        margin-top: 75px;
+      }
+
+      header .thumb {
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1),
+          0 12px 24px 0 rgba(0, 0, 0, 0.24);
+      }
+
+      header .thumb-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 36px;
+      }
+
+      header .badge {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+        position: absolute;
+        border-radius: 50%;
+        top: 0;
+        right: -8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ff5500;
+      }
+
+      header .greeting {
+        margin-bottom: 10px;
+      }
+
+      header .mail {
+        display: block;
+        width: 194px;
+
+        text-align: center;
+
+        position: relative;
+        top: 90px;
+        z-index: 509;
+
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.05);
+        color: #fff;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+        box-sizing: border-box;
+
+        animation: showPopup 0.85s;
+      }
+
+      header .mail a {
+        position: relative;
+        z-index: 503;
+
+        display: block;
+
+        padding: 8px 20px;
+      }
+
+      .list .item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        font-size: 15px;
+        position: relative;
+      }
+
+      .list .item .left {
+        display: flex;
+        align-items: center;
+      }
+
+      .list .item img {
+        padding: 20px 22px;
+      }
+
+      .list .item .right {
+        opacity: 0.5;
+      }
+
+      .list .item .right img {
+        padding-right: 14px;
+      }
+
+      .list .item .left .name {
+        margin-left: 6px;
+      }
+
+      .list {
+        margin-top: 48px;
+      }
+
+      .modal-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        animation: fadeIn 0.3s;
+        animation-fill-mode: both;
+      }
+
+      .modal-inner {
+        width: calc(100% - 48px);
+
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+
+        overflow: hidden;
+
+        animation: showPopup 0.75s;
+        animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .modal-inner .title {
+        font-size: 17px;
+      }
+
+      .bottom-info button {
+        font-size: 15px;
+        padding: 10px 20px;
+        border: 1px solid #2222224d;
+        border-radius: 4px;
+        position: absolute;
+        right: 24px;
+        bottom: 24px;
+      }
+
+      .bottom-info {
+        height: 212px;
+        padding: 24px;
+        position: relative;
+      }
+
+      .bottom-info .description {
+        margin-top: 4px;
+        line-height: 19px;
+        font-size: 12px;
+      }
+
+      .modal-inner .thumb {
+        height: 234px;
+        background-color: #eee;
+        background-image: url("img/user-thumb.png");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="thumb-wrapper">
+        <img class="thumb" src="../img/window.jpg" />
+        <div class="badge">7</div>
+      </div>
+      <div class="text-area"></div>
+      <h2 class="greeting">Posey</h2>
+      <div class="mail mouse-effect">
+        <a href="mailto:poseybutter@gmail.com">poseybutter@gmail.com</a>
+      </div>
+    </header>
+    <ul class="list">
+      <li class="item mouse-effect stagger-item">
+        <div class="left">
+          <i class="fa-brands fa-square-instagram"></i>
+          <div class="name">
+            <a href="https://www.instagram.com/yellowposey/">Instagram </a>
+          </div>
+        </div>
+      </li>
+      <li class="item mouse-effect stagger-item">
+        <div class="left">
+          <i class="fa-solid fa-blog"></i>
+          <div class="name">
+            <a href="https://poseybutter-insight.tistory.com/">Blog </a>
+          </div>
+        </div>
+      </li>
+      <li class="item mouse-effect stagger-item">
+        <div class="left">
+          <i class="fa-brands fa-github"></i>
+          <div class="name">
+            <a href="https://github.com/poseybutter"> Github</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <nav class="gnb">
+      <a href="../my/main.html" class="cover mouse-effect active">
+        <span class="material-symbols-outlined"> home </span>
+      </a>
+      <a href="../my/issue(2).html" class="cover mouse-effect">
+        <span class="material-symbols-outlined"> feed </span>
+      </a>
+      <a href="../my/likes(2).html" class="cover mouse-effect">
+        <span class="material-symbols-outlined"> favorite </span>
+      </a>
+      <a href="my(2).html" class="cover mouse-effect">
+        <span class="material-symbols-outlined"> more_horiz </span>
+      </a>
+    </nav>
+
+    <div class="overlay"></div>
+    <div class="modal-wrapper">
+      <div class="modal-inner">
+        <div class="thumb"></div>
+        <div class="bottom-info">
+          <div class="title">Dear, Designers.</div>
+          <p class="description">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores,
+            non. Iste velit soluta tenetur laudantium adipisci, temporibus,
+            reprehenderit nihil tempora dolorem perspiciatis voluptas ad ut
+            unde, eius quidem porro fuga.
+          </p>
+          <a href="../my/my(2).html"><button>Close</button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

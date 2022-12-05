@@ -1,0 +1,111 @@
+header {
+  text-align: center;
+  margin-top: 75px;
+}
+
+header .thumb {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1), 0 12px 24px 0 rgba(0, 0, 0, 0.24);
+}
+
+header .thumb-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 36px;
+}
+
+header .badge {
+  position: absolute;
+  top: 0;
+  right: -8px;
+
+  width: 28px;
+  height: 28px;
+
+  font-size: 12px;
+
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ff5500;
+  color: #fff;
+
+  animation: scaleUp 0.5s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+
+.text-area {
+  position: absolute;
+}
+
+header .greeting {
+  margin-bottom: 10px;
+}
+
+header .mail {
+  display: block;
+  width: 194px;
+  text-align: center;
+
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+
+  margin: 18px auto;
+}
+
+header .mail a {
+  position: relative;
+  z-index: 503;
+
+  display: block;
+
+  padding: 8px 20px;
+}
+
+.list {
+  margin-top: 100px;
+}
+
+.list .item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 15px;
+}
+
+.list .item .left {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  z-index: 502;
+}
+
+.list .item i {
+  width: 100px;
+
+  text-align: center;
+
+  padding: 20px 0;
+
+  font-size: 30px;
+}
+
+.list .left .name {
+  width: calc(100% - 100px);
+}
+
+.list .left .name a {
+  display: block;
+
+  width: 100%;
+
+  padding: 20px 0;
+}

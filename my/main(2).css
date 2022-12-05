@@ -1,0 +1,269 @@
+@charset "utf-8";
+@font-face {
+    font-family: montserrat_medium;
+    src: url(../../Html5&CSS/Test/fontawesome-free-6.2.0-web/webfonts/Montserrat-Medium.woff) format("woff");
+}
+@font-face {
+    font-family: montserrat_regular;
+    src: url(../../Html5&CSS/Test/fontawesome-free-6.2.0-web/webfonts/Montserrat-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: notosansKR;
+    src: url(../../Html5&CSS/Test/fontawesome-free-6.2.0-web/webfonts/NotoSansKR-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: notosansKR_medium;
+    src: url(../../Html5&CSS/Test/fontawesome-free-6.2.0-web/webfonts/Noto_Sans_KR/NotoSansKR-Medium.woff) format("woff");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #222222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+    font: 1em montserrat_medium, montserrat_regular, notosansKR, notosansKR_medium;
+    background: #dbe7df;
+    color: #222222;
+    font-size: 12px;
+    line-height: 1.4;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+input {
+    background-color: rgb(48, 48, 48);
+    opacity: 0.2;
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    transition: 0.2s;
+}
+  
+input:focus {
+    outline: none;
+    background-color:rgba(79, 79, 79, 0.8);
+    color: #fff;
+}
+  
+input::placeholder {
+    color: #fff;
+    text-align: center;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+}
+
+.text-area {
+    margin-top: 130px;
+
+    text-align: center;
+}
+  
+.text-area img {
+    margin-bottom: 50px;
+    animation: showItem 1s;
+}
+
+.stagger-item {
+    animation: showItem 0.5s;
+    animation-fill-mode: both;
+}
+.stagger-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.stagger-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.stagger-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.stagger-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.stagger-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes showItem {
+    from {
+      transform: translateY(10px);
+      opacity: 0;
+      color: aqua;
+    }
+  
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+}
+
+#circle-wrapper {
+    width: 400px;
+    margin: 100px auto;
+
+    text-align: center;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    width: 246px;
+    height: 246px;
+    border-radius: 50%;
+    animation: circleShow 1s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    animation-fill-mode: both;
+
+}
+
+@keyframes circleShow {
+    from {
+      opacity: 0;
+      transform: translateY(100px) scale(0.5);
+      background-color: aqua;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+}
+
+.circle:nth-child(1) {
+    background-color: #fff3cc;
+    animation-delay: 0.1s;
+}
+
+.circle:nth-child(2) {
+    background-color: #f8e460;
+    left: 82px;
+    animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+    background-color: #f7ca01;
+    left: 164px;
+    transition: 1s;
+    top: 0;
+    animation-delay: 0.3s;
+}
+  
+.circle:hover {
+    background: rgb(27, 140, 74);
+    top: -20px;
+}
+
+.circle:active {
+    background-color: #222222;
+    top: -20px;
+}
+
+#badge {
+    position: fixed;
+    top: 0;
+    right: 24px;
+    background: #ffc000;
+    width: 56px;
+    height: 56px;
+    font-weight: bolder;
+    font-size: 10px;
+    line-height: 11px;
+    margin-left: 24px;
+    padding-left: 13px;
+    padding-top: 18px;
+    animation: slideDown 0.5s;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideDown {
+    from {
+      transform: translateY(-60px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+}
+
+.gnb {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    background: #eee;
+    box-sizing: border-box;
+    box-shadow: inset 1px 0 0 rgba(0,0,0,0.08);
+}
+
+.gnb a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    opacity: 0.8;
+}
+
+.gnb .active {
+    opacity: 1;
+}
+
+.mouse-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.mouse-effect::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+}
+
+.mouse-effect:hover::after {
+    background: rgba(0,0,0,0.08);
+}
+
+.mouse-effect:active::after {
+    background: rgba(0,0,0,0.12);
+}
