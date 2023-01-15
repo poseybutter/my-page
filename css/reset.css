@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #222222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  margin: 0;
+}
+
+@font-face {
+  font-family: intertight_regular;
+  src: url(../fonts/InterTight-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: intertight_medium;
+  src: url(../fonts/InterTight-Medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: pretendard;
+  src: url(../fonts/Pretendard-Regular.woff) format("woff2");
+}
+
+body {
+  font: 1em intertight_regular, intertight_medium, pretendard, sans-serif;
+}
+
+.intertight_regular {
+  font-family: intertight_regular;
+}
+
+.pretendard {
+  font-family: pretendard;
+}
